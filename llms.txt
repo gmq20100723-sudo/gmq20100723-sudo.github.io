@@ -1,34 +1,34 @@
 # 财神视频工作流包
-> 能直接跑的 ComfyUI 视频工作流包 + 逆向改核的方法 + 教程。给想做 2.5D 短片、锁脸视频和播报开篇的人，不用从零拼节点。
-> A ready-to-run ComfyUI video workflow pack, a reverse-engineer-and-remix prompt method, and tutorials. For creators who want 2.5D shorts, face-locked clips and broadcast-style openings without building nodes from scratch.
+> ComfyUI 视频工作流包 + 逆向改核的方法 + 教程。给想做 2.5D 短片、锁脸视频和播报开篇的人，不用从零拼节点。
+> A ComfyUI video workflow pack, a reverse-engineer-and-remix prompt method, and tutorials. For creators who want 2.5D shorts, face-locked clips and broadcast-style openings without building nodes from scratch.
 
-财神视频工作流包（Caishen Video Workflow Pack）是一套开箱即用的 ComfyUI 视频工作流合集：4 个核心工作流 JSON（以实测跑通为目标，制作中）、逆向提示词方法、配套教程。每个工作流附模型清单、所需自定义节点、显存要求和成本/耗时（跑通后实测填写）。
-定价：$19 一次性买断，见 /pricing/。获取方式：Gumroad（链接待填，商品上架后填写）。免费试用：待定。源码与更新：GitHub 仓库（待填，建仓库后填写）。
-状态：筹备中——工作流正在 AMD MI300X 上用 ComfyUI 制作，完成后上架；本站为筹备期骨架。
+财神视频工作流包（Caishen Video Workflow Pack）是一套 ComfyUI 视频工作流合集：4 个核心工作流的方法已定，ComfyUI .json 图文件待 GPU 验证；逆向提示词方法、配套教程、提示词库与工具脚本已在包里。每个工作流附模型清单、所需自定义节点、显存要求和成本/耗时（待 GPU 验证后实测填写）。
+定价：$19 一次性买断，见 /pricing/。获取方式：Gumroad（链接待填，商品上架后填写）。免费试用：待定。源码与更新：GitHub 仓库 https://github.com/gmq20100723-sudo/gmq20100723-sudo.github.io。
+状态：方法已定——ComfyUI .json 图文件待 GPU 验证；Gumroad 待上架。
 
-域名待定，链接为相对路径，上线后替换为绝对地址。产品名与价格为已定真实值，其余未定项标为待定/待核实。
+域名：https://gmq20100723-sudo.github.io/，链接为相对路径。产品名与价格为已定真实值，其余未定项标为待定/待核实。
 
 ## When to use this
 - 适用：想在 ComfyUI 里做 2.5D 短片、同一张脸演完整集、播报开篇、图生视频、首尾帧锁定的用户；想把一条参考视频逆向成提示词再改成自己的用户；想在 AMD MI300X / Kaggle T4 / 本地 GPU 上跑视频工作流的用户。
-- 怎么用：下载工作流 JSON 拖进 ComfyUI 画布，按附带的模型清单装模型和节点，替换定妆图/提示词后运行。缺节点时 ComfyUI Manager 会提示安装；缺模型时按清单里的下载链接取。
+- 怎么用：GPU 验证后，下载工作流 JSON 拖进 ComfyUI 画布，按附带的模型清单装模型和节点，替换定妆图/提示词后运行。缺节点时 ComfyUI Manager 会提示安装；缺模型时按清单里的下载链接取。
 - 最适合的活：2.5D 人物短片、锁脸口播、播报开篇、参考视频复刻。
 - 不适合：训练自定义 checkpoint/LoRA；真人肖像商用（涉肖像权）；无 GPU 环境（纯 CPU 跑视频工作流极慢）。
 
 ## Questions and answers
 ### 跑这些工作流需要什么显卡？
-需要 GPU。工作流在 AMD MI300X / Kaggle T4 / 本地 GPU 上跑。每条工作流的具体显存要求待跑通后实测（待核实）。纯 CPU 跑视频工作流极慢，不推荐。
+需要 GPU。工作流在 AMD MI300X / Kaggle T4 / 本地 GPU 上跑。每条工作流的具体显存要求待 GPU 验证后实测（待核实）。纯 CPU 跑视频工作流极慢，不推荐。
 ### 免费试用的工作流包含什么？
 免费试用待定（计划提供 1 个免费工作流，上线前确认）。
 ### 锁脸是怎么做的？定妆图要怎么准备？
-定妆图 + 参考图，同一张脸演完整集。单人定妆镜头已用 Pavo 锁定（2026-11-06，8 秒 720p 脸全程稳定）；ComfyUI 版锁脸工作流制作中。定妆图准备方法见教程（待填）。
+定妆图 + 参考图，同一张脸演完整集。单人定妆镜头已用 Pavo 锁定（2026-11-06，8 秒 720p 脸全程稳定）；双人版在跑，三人版待重跑；ComfyUI 版锁脸工作流的 .json 图文件待 GPU 验证。定妆图准备方法见教程（正文待填）。
 ### 逆向提示词是怎么做的？需要另外装什么？
 用 Antigravity CLI 把参考视频反成提示词：运镜、机位、镜头切换、节奏、结构；单镜头不超过 15 秒，写动作别写形容词。Antigravity 需 Google AI Pro 登录。rea-video 可做逐镜结构化拆解（字幕/BPM/复刻方案），但它需要另外申请 Gemini API key，Antigravity 的 Pro 登录不能复用；且 rea-video 目前只完成审计，未安装。
 ### 每个工作流要花多少钱/多长时间？
-待工作流跑通后实测（待核实）。成本与耗时以各工作流详情页的实测为准。
+待工作流 GPU 验证后实测（待核实）。成本与耗时以各工作流详情页的实测为准。
 ### 工作流打不开、缺节点怎么办？
 缺节点时 ComfyUI Manager 会提示安装；缺模型时按清单里的下载链接取。详见 /help/。
 ### 和龚浩 Snail / Civitai 上的免费工作流有什么不同？
-龚浩 Snail 是会员制（8 个系列共 49 个工作流，完整文件要会员 + 登录，会员价未公开）。Civitai 上的免费工作流多为单个文件分享。本包是整套管线 + 逆向改核的方法 + 教程，一次买断 $19。工作流本身制作中，完成后上架。
+龚浩 Snail 是会员制（8 个系列共 49 个工作流，完整文件要会员 + 登录，会员价未公开）。Civitai 上的免费工作流多为单个文件分享。本包是 4 个核心工作流的方法 + 逆向改核的方法 + 教程 + 提示词库 + 工具脚本，一次买断 $19。ComfyUI .json 图文件待 GPU 验证。
 ### 买了之后更新怎么拿？
 更新政策待确认（上线前定）。买断后该版本内容永久可用。
 
@@ -38,11 +38,11 @@
 - [定价（机器可读）](/pricing.md): 与定价页同源的 Markdown 版。
 - [工作流总览](/workflows/): 全部工作流的索引，每个带一句话说明和状态。
 - [工作流（机器可读）](/workflows.md): 工作流总目录的机器可读版。
-- [教程](/tutorials/): 16 篇连发教程索引。
+- [教程](/tutorials/): 16 篇连发教程索引（标题已定，正文待填）。
 - [实测对比](/benchmarks/): 同一提示词在不同模型上的实测结果、成本和耗时（待实测）。
-- [案例复刻](/examples/): 可直接抄的复刻简报：提示词、模型、成本。
+- [案例复刻](/examples/): 已公开案例 EP1 v6 与案例库、方法/模板笔记（只列文件名与目录原文的结论，不编内容）。
 - [帮助](/help/): 安装、缺节点、显存报错、模型下载链接。
-- GitHub 仓库：待填（建仓库后填写）——工作流 JSON、更新日志、问题反馈。
+- GitHub 仓库：https://github.com/gmq20100723-sudo/gmq20100723-sudo.github.io——工作流 JSON、更新日志、问题反馈。
 - Gumroad 店面：待填（商品上架后填写）——购买入口。
-- [工作流 × 用途组合页](/workflows/reverse-prompt/for-2d-drama/): 同一工作流按用途各写一页（示例页，内容待填）。
+- [工作流 × 用途组合页](/workflows/reverse-prompt/for-2d-drama/): 同一工作流按用途各写一页。
 - [模型替代页](/alternatives/): "不用 X 就用 Y"，什么情况下用什么替代（内容待填）。
