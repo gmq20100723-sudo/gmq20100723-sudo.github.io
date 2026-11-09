@@ -1,17 +1,17 @@
 # 财神视频工作流包 · GitHub Pages 站点配置
-# 发布前需填：url（域名）、gumroad_url（购买链接）、github_repo（源码仓库）
+# 待填：gumroad_url（购买链接，Gumroad 商品上架后填）；url 与 github_repo 已填
 title: 财神视频工作流包
-description: 能直接跑的 ComfyUI 视频工作流包 + 逆向改核的方法 + 教程
-# 域名未定：先用 GitHub Pages 免费子域名；自定义域名确定后改 url，步骤见 README.md
-url: "https://gmq20100723-sudo.github.io"  # 用户站：仓库名 gmq20100723-sudo.github.io，站内绝对链接不用改
-baseurl: ""  # 用户站（USERNAME.github.io）留空；项目站填 /仓库名
+description: ComfyUI 视频工作流包 + 逆向改核的方法 + 教程
+# 域名：GitHub Pages 免费子域名；自定义域名确定后改 url，步骤见 README.md
+url: "https://gmq20100723-sudo.github.io" # 用户站：仓库名 gmq20100723-sudo.github.io，站内绝对链接不用改
+baseurl: "" # 用户站（USERNAME.github.io）留空；项目站填 /仓库名
 theme: minima
 lang: zh-CN
 
 # 购买链接：Gumroad 商品上架后填；留空时首页购买按钮显示"待上架"
-gumroad_url: ""  # 待填
+gumroad_url: "" # 待填
 
-# 源码仓库：建仓库后填
+# 源码仓库
 github_repo: "https://github.com/gmq20100723-sudo/gmq20100723-sudo.github.io"
 
 # 让 Jekyll 复制 .well-known/（默认会跳过隐藏目录）
