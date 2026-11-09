@@ -2,7 +2,7 @@
 
 本站是「财神视频工作流包」（$19 一次性买断）的 GitHub Pages 站：首页、定价、llms.txt、工作流总览、用途页、案例复刻页。
 
-**当前状态：方法已定。** 4 个核心工作流的方法已定，ComfyUI .json 图文件待 GPU 验证；逆向组合方法、Pavo 单人定妆镜头、EP1 v6 已公开案例、提示词库、工具脚本已在包里。不许对外宣称 ComfyUI .json 图文件已经做完、已经发布。购买链接待上架（Gumroad）；域名与 GitHub 仓库已定：域名 https://gmq20100723-sudo.github.io/；GitHub 仓库 https://github.com/gmq20100723-sudo/gmq20100723-sudo.github.io。
+**当前状态：方法已定。** 4 个核心工作流的方法已定，ComfyUI .json 图文件待 GPU 验证；逆向组合方法、Pavo 单人定妆镜头、EP1 v6 已公开案例、提示词库、工具脚本已在包里。不许对外宣称 ComfyUI .json 图文件已经做完、已经发布。购买链接待上架（Gumroad）；域名与 GitHub 仓库已定：[域名](https://gmq20100723-sudo.github.io/)、[GitHub 仓库](https://github.com/gmq20100723-sudo/gmq20100723-sudo.github.io)。
 
 ## 文件地图
 
